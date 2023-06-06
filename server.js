@@ -24,8 +24,8 @@ app.use('/api/user', userRoutes)
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     // listen for requests
-    const port = process.env.PORT || 3000;
-    app.listen(port, () => {
+    const PORT = process.env.PORT || 8080;
+    app.listen(PORT, () => {
       console.log("connected to db & listening on port", process.env.PORT);
     });
   })
